@@ -1,68 +1,203 @@
-%Adam Lavertu
-%General CV for application to science sector jobs
-%Adapted from code written by Trey Hunner
-\documentclass{resume}
+\documentclass[12pt,]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
-\name{Adam Lavertu}
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures={TeX}}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Serif}
+\setmonofont[SmallCapsFont={Liberation Serif}]{Liberation Serif}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
+\definecolor{cvlinkcolor}{RGB}{6,125,233}
+\hypersetup{colorlinks,linkcolor=cvlinkcolor,citecolor=cvlinkcolor,urlcolor=cvlinkcolor,bookmarksnumbered,bookmarks=false,pdfinfo={Title={Curriculum Vitae},Author={Lighton Phiri},Creator={Lighton Phiri},Subject={Curriculum Vitae},Keywords={Curriculum Vitae},CreationDate={D:20150513232724}}}
+\renewcommand\labelenumi{[\theenumi]}
 
-\address{450 Oak Grove Apt. 106, Menlo Park, CA 94025  \\ (207)~$\cdot$~509~$\cdot$~8529$\cdot$ \\  adamlavertu@gmail.com}
+\date{}
 
 \begin{document}
-	
-	\begin{rSection}{Education}
-		
-		{\bf Colby College} \hfill {\em Bachelor of Arts, May 2016} \\ 
-		\textbf{Major:} Computational Biology \textbf{Minor:} Chemistry
-		
-		{\bf The Jackson Laboratory} \hfill {\em Summer 2015} \\
-		Summer Student Program 
-		
-	\end{rSection}
-	
-	\begin{rSection}{Skills Summary}
-		
-		\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-			Computer Languages & Java, Python, R, Unix \\
-			Data Analysis & RNA-Seq, BAC Sequence, Sequence Alignments, Phylogenetic Trees \\
-			Wet Lab Skills & Immunoblots, PCR, Bacterial Cell Culture, Sterile Technique
-		
-		\end{tabular}
-		
-	\end{rSection}
-	
-	\begin{rSection}{Experience}
-		
-		\begin{rSubsection}{The Jackson Laboratory}{May 2015 - August 2016}{Research Intern - Bult Lab}{Bar Harbor, ME}
-			\item Analyzed RNA-Seq data from Patient-Derived Xenograft Models
-			\item Separated host and graft RNA-Seq reads in \textit{in silico}
-			\item Used enrichment analysis to identify changes in gene expression associated with the presence of the human tumor in the murine host epithelial tissue
-		\end{rSubsection}
-		
-		\begin{rSubsection}{Colby College}{May 2014 - August 2016}{Research Assistant - Peck Lab}{Waterville, ME}
-			\item Studied transmembrane protein interactions in \textit{Halobacterium Salinarum}
-			\item Used multiple sequence alignments, phylogenetic trees, and mutual information analysis to interrogate \textit{bop} and \textit{lye} genes for evidence of coevolution
-			\item Constructed \textit{H. Salinarum} strains with tagged proteins
-			\item Performed immunoblots and silver stains on protein isolate
-		\end{rSubsection}
-		
-		\begin{rSubsection}{Colby College}{September 2013 - May 2015}{Research Assistant - Mitchell Lab}{Waterville, ME}
-			\item Computationally identified prospective cyclins and cyclin-dependent kinases from within the novelly sequenced \textit{Symbiodinium minutum} genome
-		\end{rSubsection}
-		
-	\end{rSection}
-	
-	\begin{rSection}{Other Experience}
-		
-		\begin{rSubsection}{Office of Campus Events}{January 2013 - May 2016}{Office Assistant}{Waterville, ME}
-			\item Scheduled campus events and supervised other student workers
-		\end{rSubsection}
-		\begin{rSubsection}{Colby Volunteer Center}{April 2014 - May 2016}{Co-Director}{Waterville, ME}
-			\item Coordinated all on and off campus student volunteering
-			\item Organized large community events
-		\end{rSubsection}
-		
-	\end{rSection}
-	
+
+\begin{table}[h]
+%%%\centering
+{\def\arraystretch{1.2}\tabcolsep=0pt
+\begin{tabular}{p{0.60\linewidth}p{0.05\linewidth}p{0.35\linewidth}}
+
+  \multirow{1}{*}{\LARGE \textbf{Adam Lavertu}} &  &  \\
+  
+  & & \\
+  
+  Biomedical Informatics Training Program & \multicolumn{1}{r}{Phone:\;\;} & \multicolumn{1}{l}{$1$ (207) 509 8529} \\
+  
+  Stanford University & \multicolumn{1}{r}{Email:\;\;} &\multicolumn{1}{l}{\href{alavertu@stanford.edu}{alavertu@stanford.edu}} \\
+  
+  1265 Welch Road, MSOB X-215, MC 5479& \multicolumn{1}{r}{Home:\;\;} & \multicolumn{1}{l}{\url{med.stanford.edu/profiles/adam-lavertu}} \\
+  
+  Stanford, CA 94305 & \multicolumn{1}{r}{ORCID iD:\;\;} & \multicolumn{1}{l}{\href{https://orcid.org/0000-0003-2396-1915}{orcid.org/0000-0003-2396-1915}} \\
+
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Education}\label{education}
+
+\textbf{\textsuperscript{†}} \emph{Indicates expected}
+
+\begin{table}[h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.5\linewidth}p{0.3\linewidth}}
+
+  \multirow{2}{*}[0.85em]{2016--2020 \textsuperscript{\textbf{\textdagger}}} & Ph.D., Biomedical Informatics & Stanford University \\
+  & Supervisor: Russ Altman \\
+  2012--2016 & B.A., Computational Biology & Colby College \\
+
+\end{tabular}%
+}
+\end{table}
+\subsection{Relevant Experience}\label{relevant-experience}
+
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.5\linewidth}p{0.3\linewidth}}
+
+  Summer, 2016 & Residential Staff, Summer Student Program & The Jackson Laboratory \\
+  Summer, 2015 & Summer Student, Bult Lab & The Jackson Laboratory\\
+  2014-2016 & Research Student, Peck Lab & Colby College\\
+  2014-2015 & Research Student, Mitchell Lab & Colby College\\
+\end{tabular}%
+}
+\end{table}
+
+
+\subsection{Teaching Assistant}\label{teaching-assistant}
+
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.5\linewidth}p{0.3\linewidth}}
+
+  2017 & BIOMEDIN214, Representations and Algorithms for Computational Molecular Biology & Stanford University \\
+  2015 & BI227, Cell Biology & Colby College \\
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Selected Honours and
+Awards}\label{selected-honours-and-awards}
+
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.8\linewidth}}
+
+  2016 & Mid-Maine Homeless Shelter Service Award\\
+  2016 & Colby College Standout Senior\\
+  2015 & Colby College Board of Trustees Student Representative
+
+\end{tabular}%
+}
+\end{table}
+\subsection{Community Engagement}\label{community-engagement}
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.8\linewidth}}
+	2016 & Jackson Laboratory Educational Outreach Guest Speaker\\
+  2014-2016 & Co-Director of the Colby Volunteer Center\\
+\end{tabular}%
+}
+\end{table}
+
+\subsection{News articles}\label{news}
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.8\linewidth}}
+	2017 & \href{https://www.colby.edu/magazine/big-data/}{"Big Data"}\\
+	2016 & \href{http://www.colby.edu/commencement/profiles/lavertu-adam/}{``2016 Standout Seniors"}\\
+  	2016 & \href{https://www.colby.edu/goldfarb/2015/12/16/out-of-the-cold-colby-volunteer-center-raises-funds-for-shelters-day-program/}{``Out of the Cold: Colby Volunteer Center Raises Funds for Shelter’s Day Program"}
+    \end{tabular}%
+}
+\end{table}
+
+\subsection{Publications}\label{publications}
+
+\subsubsection{Articles}\label{articles}
+
+\begin{enumerate}
+  %%%%%\leftskip-0.25in % for bullets
+  \leftskip-0.13in % for numbers
+  \item DeBoever, Christopher, Yosuke Tanigawa, Greg McInnes, \textbf{Adam Lavertu}, Chris Chang, Carlos D Bustamante, Mark J Daly, and Manuel A Rivas. “Medical Relevance of Protein-Truncating Variants across 337,208 Individuals in the {UK} Biobank Study” Nature Genetics. In Review. August 2017. doi:10.1101/179762.
+  %%%
+  \item Lalonde, Simon, Oliver A Stone, Samuel Lessard, \textbf{Adam Lavertu}, Jessica Desjardins, Mélissa Beaudoin, Manuel Rivas, Didier Y R Stainier, and Guillaume Lettre. “Frameshift Indels Introduced by Genome Editing Can Lead to in-Frame Exon Skipping.” {PLOS} {ONE} 12, no. 6 (June 2017): e0178700. doi:10.1371/journal.pone.0178700.
+\end{enumerate}
+
+\subsubsection{Posters}\label{posters}
+
+\begin{enumerate}
+  %%%%%\leftskip-0.25in % for bullets
+  \leftskip-0.13in % for numbers
+  \item \textbf{Adam Lavertu}, Joel Graber, Andrea Tilden, and Carol Bult. “Patient Derived Xenograft Tumor Samples: What Does the Mouse Contribute?” Colby Liberal Arts Symposium 2016. Colby College, Waterville, Maine.\\
+  \item \textbf{Adam Lavertu}, Hallie Jester, and Geoffrey Mitchell. “Cell Cycle Dependent Expression of Unknown Cyclins and Cdks in Symbiodinium minutum.” Colby Liberal Arts Symposium 2015. Colby College, Waterville, Maine.\\
+  \item \textbf{Adam Lavertu} and Ron Peck. “Clarifying the protein interactions of lycopene elongase and bacterioopsin in H. salinarium.” Colby Liberal Arts Symposium 2015. Colby College, Waterville, Maine.\\
+  \item \textbf{Adam Lavertu}, Audrey Lyman, and Geoffrey Mitchell. “Symbiotic Cell Cycle Regulation in Cnidaria and Symbiodinium: A Bioinformatic Exploration.” Colby Liberal Arts Symposium 2014. Colby College, Waterville, Maine.\\
+
+\end{enumerate}
+
+\pagebreak
+
+
+
 \end{document}
