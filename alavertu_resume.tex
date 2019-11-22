@@ -1,0 +1,150 @@
+\documentclass[12pt,]{scrartcl}
+\renewcommand\refname{}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{xstring}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true} % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
+\definecolor{cvlinkcolor}{RGB}{6,125,233}
+\hypersetup{colorlinks,linkcolor=cvlinkcolor,citecolor=cvlinkcolor,urlcolor=cvlinkcolor,bookmarksnumbered,bookmarks=false,pdfinfo={Title={Curriculum Vitae},Author={Lighton Phiri},Creator={Lighton Phiri},Subject={Curriculum Vitae},Keywords={Curriculum Vitae},CreationDate={D:20150513232724}}}
+\renewcommand\labelenumi{[\theenumi]}
+
+\def\FormatName#1{%
+	\def\myname{Adam Lavertu}%
+	\edef\name{#1}%
+	\ifx\name\myname
+	\textbf{#1}%
+	\else
+	#1%
+	\fi
+}
+
+\date{}
+\bibliographystyle{boldme}
+
+\begin{document}
+\nocite{*}
+\begin{table}[h]
+%%%\centering
+{\def\arraystretch{1.2}\tabcolsep=0pt
+\begin{tabular}{p{0.60\linewidth}p{0.05\linewidth}p{0.35\linewidth}}
+
+  \multirow{1}{*}{\LARGE \textbf{Adam Lavertu}} &  &  \\
+  
+  & & \\
+  
+  Biomedical Informatics Training Program & \multicolumn{1}{r}{Phone:\;\;} & \multicolumn{1}{l}{$1$ (207) 509-8529} \\
+  
+   Stanford University & \multicolumn{1}{r}{Email:\;\;} &\multicolumn{1}{l}{\href{alavertu@stanford.edu}{alavertu@stanford.edu}} \\
+  
+  1265 Welch Road, MSOB X-343& &  \\
+  
+  Stanford, CA 94305 & \multicolumn{1}{r}{ORCID iD:\;\;} & \multicolumn{1}{l}{\href{https://orcid.org/0000-0003-2396-1915}{orcid.org/0000-0003-2396-1915}} \\
+
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Education}\label{education}
+
+\textbf{\textsuperscript{†}} \emph{Indicates expected}
+
+\begin{table}[h]
+%%%\centering
+{\def\arraystretch{0.9}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.5\linewidth}p{0.4\linewidth}}
+
+  \multirow{2}{*}[0.2em]{2016--2021 \textsuperscript{\textbf{\textdagger}}} & Ph.D., Biomedical Informatics & Stanford University \\
+  & Supervisor: Russ Altman & 1 (650) 723-1398  \\
+  & & 1265 Welch Road\\
+  & & Stanford, CA 94305 \\
+  \\
+  2012--2016 & B.A., Computational Biology & Colby College \\
+  & & 1 (207) 859-4000 \\
+  & & 4000 Mayflower Hill Drive \\
+  & & Waterville, ME 04901 \\
+\end{tabular}%
+}
+\end{table}
+\subsection{Relevant Experience}\label{relevant-experience}
+
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{0.9}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.5\linewidth}p{0.3\linewidth}}
+  2015-2016 & Research Assistant, Bult Lab & The Jackson Laboratory\\
+   & & 1 (207) 288-6324 \\
+  & & 600 Main Street \\
+  & & Bar Harbor, ME 04609\\
+  \\
+  2014-2016 & Research Assistant, Peck Lab & Colby College\\
+  & & 1 (207) 859-5748 \\
+  & & 4000 Mayflower Hill Drive \\
+  & & Waterville, ME 04901 \\
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Selected Honors and
+Awards}\label{selected-honours-and-awards}
+
+\begin{table}[!h]
+%%%\centering
+{\def\arraystretch{1.5}\tabcolsep=4pt
+\begin{tabular}{p{0.2\linewidth}p{0.8\linewidth}}
+  2018 & NSF Graduate Research Fellowship \\
+  2018 & Biomedical Informatics Training Program Student Czar \\
+  2016 & Mid-Maine Homeless Shelter Service Award\\
+
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Publications}\label{publications}
+\vspace*{-4em}
+\bibliography{myPubs}
+
+\end{document}
